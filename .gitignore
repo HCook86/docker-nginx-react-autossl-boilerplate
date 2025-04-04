@@ -34,9 +34,6 @@ pnpm-lock.yaml
 
 # Docker-related ignores
 docker-compose.override.yml
-docker-compose*.yaml
-docker-compose*.yml
-.dockerignore
 docker-data/
 docker-db-data/
 docker-logs/
