@@ -25,14 +25,16 @@
             
     ```
 
-3. #### Change environment variables by editing conf.env
+3. #### Change environment variables by editing server_config.env
+
+    Example server_config.env file
 
     ```
     # .env
 
-    ALLOWED_DOMAINS='henrycook.net'
-    SITES='henrycook.net=nginx:80'
-    NGINX_SERVER_NAME='*.henrycook.net henrycook.net'
+    ALLOWED_DOMAINS='domain.net'
+    SITES='domain.net=nginx:80'
+    NGINX_SERVER_NAME='*.domain.net domain.net'
     ```
 
 4. #### Install docker engine and docker compose on your system
@@ -45,6 +47,8 @@
 ## Notes
 
 This stack uses the [docker-nginx-auto-ssl](https://github.com/Valian/docker-nginx-auto-ssl) container to automatically renew the SSL certificates.
+
+The React application is built inside the container.
 
 If you require further configuration, you are welcome to edit the nginx.conf file, Dockerfile or docker-compose files.
 
