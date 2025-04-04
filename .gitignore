@@ -1,0 +1,55 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+
+# Build output
+build/
+dist/
+out/
+
+# Logs
+logs/
+*.log
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables (except server_config.env)
+.env
+.env.* 
+!.server_config.env  # Keep only this env file
+
+# Docker-related ignores
+docker-compose.override.yml
+docker-compose*.yaml
+docker-compose*.yml
+.dockerignore
+docker-data/
+docker-db-data/
+docker-logs/
+volumes/
+tmp/
+
+# Nginx & SSL (if applicable)
+nginx.conf
+certs/
+ssl/
+
+# Misc
+.DS_Store
+Thumbs.db
+public/*.cache
+coverage/
