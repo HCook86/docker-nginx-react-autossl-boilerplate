@@ -4,8 +4,6 @@ services:
       context: ./webserver
       dockerfile: Dockerfile
     container_name: webserver
-    volumes:
-      - ./webserver/nginx.conf:/etc/nginx/nginx.conf
     expose:
       - "80"
     networks:
@@ -25,8 +23,8 @@ services:
     volumes:
       - ssl_data:/etc/resty-auto-ssl
     environment:
-      ALLOWED_DOMAINS: $(ALLOWED_DOMAINS)
-      SITES: $(SITES)
+      ALLOWED_DOMAINS: ${ALLOWED_DOMAINS}
+      SITES: ${SITES}
       FORCE_HTTPS: 'true'
     depends_on:
       - nginx
