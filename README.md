@@ -15,7 +15,8 @@
         ├── docker-compose.yml 
         └── webserver 
             ├── Dockerfile 
-            ├── nginx.conf 
+            ├── entrypoint.sh 
+            ├── nginx.conf.template 
             └── app  
                 ├── README.md 
                 ├── package-lock.json 
@@ -30,7 +31,7 @@
     Example server_config.env file
 
     ```
-    # .env
+    # server_config.env
 
     ALLOWED_DOMAINS='domain.net'
     SITES='domain.net=nginx:80'
@@ -55,3 +56,4 @@ If you require further configuration, you are welcome to edit the nginx.conf fil
 ## Common Errors
 
  - Make sure the firewall allows traffic on ports 80 and 443
+ - Certificate will expire and remain stale in the volume. As a troubleshooting step, remove and recreate the ssl_data volume
